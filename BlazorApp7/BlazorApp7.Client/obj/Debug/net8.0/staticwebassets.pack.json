@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Artem\\source\\repos\\BlazorApp7\\BlazorApp7\\BlazorApp7.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\source\\repos\\BlazorApp7\\BlazorApp7\\BlazorApp7.Client\\obj\\Debug\\net8.0\\compressed\\n7qfddbctb.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorApp7.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorApp7.Client.props",
+      "PackagePath": "build\\BlazorApp7.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorApp7.Client.props",
+      "PackagePath": "buildMultiTargeting\\BlazorApp7.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorApp7.Client.props",
+      "PackagePath": "buildTransitive\\BlazorApp7.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

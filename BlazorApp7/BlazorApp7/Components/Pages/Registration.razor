@@ -1,0 +1,54 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Forms
+@page "/registration"
+<a href="/">Home page</a>
+<h2>user</h2>
+<div>
+    <p>
+        Name:<br />
+        <InputText @bind-Value="user.Name" />
+    </p>
+
+    <p>
+        Email:<br />
+        <InputText @bind-Value="user.Email" />
+    </p>
+    <p>
+        Password:<br />
+        <InputText @bind-Value="user.Password" />
+    </p>
+    <button class="btn btn-primary" @onclick="Click"> Registration</button>
+    <h2>@Errorstr</h2>
+    <h2>@k</h2>
+</div>
+@code {
+    string Errorstr = "";
+    User user = new User();
+    int k = 0;
+    private void Click()
+    {
+        using (DbHelper db = new DbHelper())
+        {
+            k = db.users.ToArray().Length;
+            if (GetUser(user.Name)!=null)
+            {
+                Errorstr = "Введенное имя пользователя уже кем то используется";
+            }
+            else
+            {
+                Errorstr = "";
+                user.Role = "user";
+                user.Id = db.users.ToArray().Length + 1;
+                db.users.Add(user);
+                db.SaveChanges();
+            }
+        }
+    }
+    private User? GetUser(string name)
+    {
+        using (DbHelper db = new DbHelper())
+        {
+            return db.users.ToArray().FirstOrDefault<User>(x => x.Name == name);
+        }
+    }
+}

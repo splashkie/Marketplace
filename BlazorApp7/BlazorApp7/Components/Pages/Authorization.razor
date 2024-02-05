@@ -1,0 +1,24 @@
+﻿<a href="/">Home page</a>
+<h3>Authorization</h3>
+<div>
+    <p>
+        Name:<br />
+        <InputText @bind-Value="user.Name" />
+    </p>
+    <p>
+        Password:<br />
+        <InputText @bind-Value="user.Password" />
+    </p>
+    <button class="btn btn-primary" @onclick="Click"> Authorization</button>
+</div>
+@page "/authorization"
+@code {
+    User user = new User();
+    private void Click()
+    {
+        // using(DbHelper db= new DbHelper())
+        // {
+        //     if()
+        // }
+    }
+}
