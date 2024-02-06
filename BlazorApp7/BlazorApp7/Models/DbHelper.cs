@@ -14,5 +14,13 @@ namespace BlazorApp7.Models
         {
             optionsBuilder.UseNpgsql(connstring);
         }
+        async public Task<User> GetUser(string name, CancellationToken cancellationToken = default)
+        {
+            return await users.FirstOrDefaultAsync<User>(x => x.Name == name, cancellationToken) ?? new User();
+        }
+        async public Task<User> GetUser(int id, CancellationToken cancellationToken=default)
+        {
+            return await users.FirstOrDefaultAsync<User>(x=>x.Id==id,cancellationToken)?? new User();
+        }
     }
 }
